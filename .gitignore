@@ -1,0 +1,5 @@
+# Build Folders
+dist
+node_modules
+ts_build
+test_results
