@@ -15,9 +15,9 @@ describe(helper.GROUP_NAME, () => {
             wrapper = shallow(<Home />);
         });
 
-        it("should have a parent div with correct data type", () => {
+        it("should have a parent div with class as component name", () => {
             // Assert
-            expect(wrapper.find("div").first().prop("data-type")).toEqual("home-container");
+            expect(wrapper.find("div").prop("className")).toEqual("home-container");
         });
 
         it("should have a heading with correct text", () => {

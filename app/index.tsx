@@ -2,7 +2,7 @@ import * as React from "react";
 import { render } from "react-dom";
 const { AppContainer } = require("react-hot-loader");
 
-import { Home } from "./home/containers/home";
+import { Root } from "./root";
 
 import "./styles/global.scss";
 
@@ -12,17 +12,17 @@ const rootEl = document.getElementById("app");
 
 render(
   <AppContainer>
-    <Home />
+    <Root />
   </AppContainer>,
   rootEl
 );
 
 if (module.hot) {
-  module.hot.accept("./home/containers/home", () => {
-    const NextApp = require("./home/containers/home").Home;
+  module.hot.accept("./root", () => {
+    const NextApp = require("./root").Root;
     render(
       <AppContainer>
-         <NextApp />
+        <NextApp />
       </AppContainer>,
       rootEl
     );

@@ -104,7 +104,6 @@ module.exports = {
         })
     ],
     externals: {
-        "cheerio": "window",
         "react/addons": "react/addons",
         "react/lib/ExecutionEnvironment": "react/lib/ExecutionEnvironment",
         "react/lib/ReactContext": "react/lib/ReactContext"
