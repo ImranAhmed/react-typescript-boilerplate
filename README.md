@@ -6,6 +6,8 @@ React boilerplate project with Typescript support including:
 
 - [Typescript 2](https://github.com/Microsoft/TypeScript)
 
+- [React Router](https://github.com/ReactTraining/react-router)
+
 - [Webpack 2](https://github.com/webpack/webpack)
 
 - [Karma](https://github.com/karma-runner/karma)
