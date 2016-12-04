@@ -1,7 +1,7 @@
-var webpack = require("webpack");
-var path = require("path");
-var combineLoaders = require("webpack-combine-loaders");
-var WebpackNotifierPlugin = require("webpack-notifier");
+const webpack = require("webpack");
+const path = require("path");
+const combineLoaders = require("webpack-combine-loaders");
+const WebpackNotifierPlugin = require("webpack-notifier");
 const autoprefixer = require("autoprefixer");
 
 module.exports = {
