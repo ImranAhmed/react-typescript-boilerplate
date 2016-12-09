@@ -20,6 +20,7 @@
     "@types/jasmine-expect": "2.0.28",
     "@types/react": "0.14.50",
     "@types/react-dom": "0.14.19",
+    "@types/react-hot-loader": "^3.0.0",
     "@types/react-router": "^2.0.41",
     "@types/requirejs": "2.1.28",
     "autoprefixer-loader": "3.2.0",

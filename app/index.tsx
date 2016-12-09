@@ -1,6 +1,6 @@
 import * as React from "react";
+import { AppContainer } from "react-hot-loader";
 import { render } from "react-dom";
-const { AppContainer } = require("react-hot-loader");
 
 import { Root } from "./root";
 
