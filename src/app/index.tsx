@@ -4,7 +4,7 @@ import { render } from "react-dom";
 
 import { Root } from "./root";
 
-import "./styles/global.scss";
+import "../styles/global.scss";
 
 declare var module: { hot: any };
 

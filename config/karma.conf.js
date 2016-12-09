@@ -14,13 +14,13 @@ module.exports = function (config) {
 
     // list of files / patterns to load in the browser
     files: [
-      { pattern: "../app/**/*spec.tsx" }
+      { pattern: "../src/**/*spec.tsx" }
     ],
 
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      "../app/**/*.spec.ts*": ["webpack"]
+      "../src/**/*.spec.ts*": ["webpack"]
     },
 
     // list of files to exclude
@@ -33,6 +33,11 @@ module.exports = function (config) {
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
     reporters: ["html", "mocha"],
+
+    // reporter options 
+    mochaReporter: {
+      ignoreSkipped : true
+    },
 
     htmlReporter: {
       outputFile: "../test_results/units.html",

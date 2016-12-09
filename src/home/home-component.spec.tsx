@@ -29,7 +29,7 @@ describe(constants.MY_APPLICATION, () => {
         it("should have a heading with correct class", () => {
             // Assert
             let h2 = wrapper.find("h2");
-            expect(h2.prop("className")).toContain("home__title___");
+            expect(h2.prop("className")).toContain("home-component__title___");
         });
 
         it("should have a heading with bootstrap class text-muted", () => {

@@ -2,9 +2,9 @@ import * as React from "react";
 import { Router, Route  } from "react-router";
 import { shallow } from "enzyme";
 
-import * as constants from "./app/constants";
-import { Home } from "./home/home-component";
-import { Search } from "./search/search-component";
+import * as constants from "./constants";
+import { Home } from "../home/home-component";
+import { Search } from "../search/search-component";
 
 import { Root } from "./root";
 
