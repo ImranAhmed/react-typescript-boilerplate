@@ -2,11 +2,11 @@ import * as React from "react";
 import { Link } from "react-router";
 import { mount } from "enzyme";
 
-import * as helper from "../../common/tests";
+import * as constants from "../app/constants";
 
 import { Search } from "./search-component";
 
-describe(helper.GROUP_NAME, () => {
+describe(constants.MY_APPLICATION, () => {
     describe("Search :: Containers :: Search", () => {
 
         // Arrange

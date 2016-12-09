@@ -2,7 +2,7 @@ import * as React from "react";
 import { Link } from "react-router";
 import classNames from "classnames";
 
-import * as constants from "../constants";
+import * as constants from "../app/constants";
 
 const styles = require("./home-component.scss");
 

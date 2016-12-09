@@ -1,11 +1,11 @@
 import * as React from "react";
 import { shallow } from "enzyme";
 
-import * as helper from "../../common/tests";
+import * as constants from "../app/constants";
 
 import { Home } from "./home-component";
 
-describe(helper.GROUP_NAME, () => {
+describe(constants.MY_APPLICATION, () => {
     describe("Home :: Containers :: Home", () => {
 
         // Arrange
