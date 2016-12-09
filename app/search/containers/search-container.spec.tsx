@@ -4,7 +4,7 @@ import { mount } from "enzyme";
 
 import * as helper from "../../common/tests";
 
-import { Search } from "./search";
+import { Search } from "./search-container";
 
 describe(helper.GROUP_NAME, () => {
     describe("Search :: Containers :: Search", () => {

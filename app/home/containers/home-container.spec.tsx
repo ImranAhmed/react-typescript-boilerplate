@@ -3,7 +3,7 @@ import { shallow } from "enzyme";
 
 import * as helper from "../../common/tests";
 
-import { Home } from "./home";
+import { Home } from "./home-container";
 
 describe(helper.GROUP_NAME, () => {
     describe("Home :: Containers :: Home", () => {

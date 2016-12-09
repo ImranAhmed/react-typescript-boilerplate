@@ -3,8 +3,8 @@ import { Router, Route  } from "react-router";
 import { shallow } from "enzyme";
 
 import * as helper from "./common/tests";
-import { Home } from "./home/containers/home";
-import { Search } from "./search/containers/search";
+import { Home } from "./home/containers/home-container";
+import { Search } from "./search/containers/search-container";
 
 import { Root } from "./root";
 

@@ -4,7 +4,7 @@ import classNames from "classnames";
 
 import * as constants from "../constants";
 
-const styles = require("./home.scss");
+const styles = require("./home-container.scss");
 
 export const Home = () => {
         return (<div className="home-container">
