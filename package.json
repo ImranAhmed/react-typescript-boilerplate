@@ -18,6 +18,7 @@
     "@types/enzyme": "2.5.39",
     "@types/jasmine": "2.5.38",
     "@types/jasmine-expect": "2.0.28",
+    "@types/lodash": "^4.14.43",
     "@types/react": "0.14.50",
     "@types/react-dom": "0.14.19",
     "@types/react-hot-loader": "^3.0.0",
