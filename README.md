@@ -1,8 +1,10 @@
-# React, Typescript Boilerplate
+# React, Redux, Typescript Boilerplate
 
-React boilerplate project with Typescript support including:
+React boilerplate project with Typescript support including and sample todo application.
 
 - [React](https://github.com/facebook/react)
+
+- [Redux](http://redux.js.org/docs/basics/UsageWithReact.html)
 
 - [Typescript 2](https://github.com/Microsoft/TypeScript)
 
