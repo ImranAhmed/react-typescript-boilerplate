@@ -8,14 +8,14 @@ export interface LinkComponentProps {
 
 export const LinkComponent = (props: LinkComponentProps) => {
 
-    const renderLink = () => {
+    const renderWithAction = () => {
         return (<a className="active" href="#"
             onClick={e => { handeOnClick(e); } }>
             {props.children}
         </a>);
     };
 
-    const renderNoLink = () => {
+    const renderWithNoAction = () => {
         return <span className="non-active">{props.children}</span>;
     };
 
@@ -25,6 +25,6 @@ export const LinkComponent = (props: LinkComponentProps) => {
     };
 
     return (<div className="link-component">
-        {props.active ? renderLink() : renderNoLink()}
+        {props.active ? renderWithNoAction() : renderWithAction()}
     </div>);
 };
