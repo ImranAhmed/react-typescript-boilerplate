@@ -10,7 +10,7 @@ interface TodoComponentProps {
 };
 
 export const TodoComponent = (props: TodoComponentProps) => {
-    return (<div className="todo-component">
+    return (<div className={styles.main}>
         <li
             onClick={props.onClick}
             className={props.completed ? classNames(styles.line_through) : classNames(styles.none)}>

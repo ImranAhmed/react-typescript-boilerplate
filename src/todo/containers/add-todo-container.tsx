@@ -23,21 +23,21 @@ const AddTodo = (props: AddTodoProps) => {
                 props.addTodo(input.value);
                 input.value = "";
             } }>
-                <input ref={node => {
-                    input = node;
-                } } />
-                <button type="submit">
-                    Add Todo
-            </button>
+                <div className="input-group">
+                    <input type="text" ref={node => { input = node; } } className="form-control" placeholder="Add new todo..." />
+                    <span className="input-group-btn">
+                        <button className="btn btn-primary" type="submit">Add</button>
+                    </span>
+                </div>
             </form>
         </div>
     );
 };
 
 const mapDispatchToProps = (dispatch: any) => {
-  return bindActionCreators({
-    addTodo: addTodo,
-  }, dispatch);
+    return bindActionCreators({
+        addTodo: addTodo,
+    }, dispatch);
 };
 
 export const AddTodoContainer = connect(null, mapDispatchToProps)(AddTodo);

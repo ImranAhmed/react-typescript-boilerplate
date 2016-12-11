@@ -8,6 +8,8 @@ export interface TodoListComponentProps {
     onTodoClick(item: number): void;
 };
 
+const styles = require("./todo-list-component.scss");
+
 export const TodoListComponent = (props: TodoListComponentProps) => {
 
     const renderListOfItems = () => {
@@ -21,7 +23,7 @@ export const TodoListComponent = (props: TodoListComponentProps) => {
         </ul>);
     };
 
-    return (<div className="todo-list-component">
+    return (<div className={styles.main}>
         {props.todos ? renderListOfItems() : null}
     </div>);
 };

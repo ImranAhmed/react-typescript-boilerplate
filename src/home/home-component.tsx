@@ -1,7 +1,7 @@
 import * as React from "react";
 import classNames from "classnames";
 
-import { FooterComponent } from "../todo/components/footer-component";
+import { FilterComponent } from "../todo/components/filter-component";
 import { AddTodoContainer } from "../todo/containers/add-todo-container";
 import { VisibleTodoListContainer } from "../todo/containers/visible-todo-list-container";
 
@@ -11,9 +11,9 @@ const styles = require("./home-component.scss");
 
 export const Home = () => {
         return (<div className="home-container">
+                <FilterComponent />
                 <AddTodoContainer />
                 <VisibleTodoListContainer />
-                <FooterComponent />
         </div>);
 };
 
