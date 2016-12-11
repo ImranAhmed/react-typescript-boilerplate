@@ -1,12 +1,12 @@
 import * as React from "react";
 
-export interface LinkComponentProps {
+export interface FilterLinkComponentProps {
     active: boolean;
     children: number | string | Element | number[] | string[] | Element[];
     onClick: () => void;
 }
 
-export const LinkComponent = (props: LinkComponentProps) => {
+export const FilterLinkComponent = (props: FilterLinkComponentProps) => {
 
     const renderWithAction = () => {
         return (<a className="active" href="#"

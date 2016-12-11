@@ -1,7 +1,7 @@
 import { connect } from "react-redux";
 
 import { setVisibilityFilter } from "../actions";
-import { LinkComponent, LinkComponentProps } from "../components/link-component";
+import { FilterLinkComponent } from "../components/filter-link-component";
 
 interface FilterLinkContainerProps {
     filter: string;
@@ -28,4 +28,4 @@ const mapDispatchToProps = (dispatch: any, ownProps: FilterLinkContainerProps) =
 export const FilterLinkContainer = connect(
     mapStateToProps,
     mapDispatchToProps
-)(LinkComponent);
+)(FilterLinkComponent);

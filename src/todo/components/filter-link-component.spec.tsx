@@ -1,7 +1,7 @@
 import * as React from "react";
 import { shallow } from "enzyme";
 
-import { LinkComponent } from "./link-component";
+import { FilterLinkComponent } from "./filter-link-component";
 
 import * as constants from "../../constants";
 
@@ -13,7 +13,7 @@ describe(constants.APPLICATION_NAME, () => {
             let children: number[] = new Array<number>();
             children.push(1);
             children.push(2);
-            return shallow(<LinkComponent active={isActive} onClick={onClickSpy} children={children} />);
+            return shallow(<FilterLinkComponent active={isActive} onClick={onClickSpy} children={children} />);
         }
 
         describe("Not Active ", () => {
