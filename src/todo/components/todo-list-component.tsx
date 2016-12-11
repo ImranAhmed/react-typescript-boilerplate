@@ -1,12 +1,12 @@
-import React, { PropTypes } from "react";
+import * as React from "react";
 
 import { Todo } from "../models/todo";
 import { TodoComponent } from "./todo-component";
 
-interface TodoListComponentProps {
+export interface TodoListComponentProps {
     todos: Todo[];
     onTodoClick(item: number): void;
-}
+};
 
 export const TodoListComponent = (props: TodoListComponentProps) => {
 

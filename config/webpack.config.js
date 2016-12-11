@@ -29,10 +29,6 @@ module.exports = {
                 loader: "json-loader"
             },
             {
-                test: /\.ts$/,
-                loaders: ["babel-loader", "ts-loader"]
-            },
-            {
                 test: /\.tsx?$/,
                 loaders: ["babel-loader", "ts-loader"]
             },

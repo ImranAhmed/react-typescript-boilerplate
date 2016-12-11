@@ -6,36 +6,40 @@ import { Home } from "../home/home-component";
 
 import { Root } from "./root";
 
-describe("Root ::", () => {
+import * as constants from "../constants";
 
-    // Arrange
-    let wrapper: any;
+describe(constants.APPLICATION_NAME, () => {
+    describe("Root ::", () => {
 
-    beforeEach(() => {
-        wrapper = shallow(<Root />);
-    });
+        // Arrange
+        let wrapper: any;
 
-    it("should have a router", () => {
+        beforeEach(() => {
+            wrapper = shallow(<Root />);
+        });
 
-        // Assert
-        expect(wrapper.find(Router).length).toEqual(1);
-    });
+        it("should have a router", () => {
 
-    it("should have one route link", () => {
+            // Assert
+            expect(wrapper.find(Router).length).toEqual(1);
+        });
 
-        // Assert
-        expect(wrapper.find(Route).length).toEqual(1);
-    });
+        it("should have one route link", () => {
 
-    it("should have home link", () => {
+            // Assert
+            expect(wrapper.find(Route).length).toEqual(1);
+        });
 
-        // Assert
-        expect(wrapper.find(Route).find({ component: Home }).length).toEqual(1);
-    });
+        it("should have home link", () => {
 
-    it("should have home link as its first link", () => {
+            // Assert
+            expect(wrapper.find(Route).find({ component: Home }).length).toEqual(1);
+        });
 
-        // Assert
-        expect(wrapper.find(Route).first().prop("component")).toEqual(Home);
+        it("should have home link as its first link", () => {
+
+            // Assert
+            expect(wrapper.find(Route).first().prop("component")).toEqual(Home);
+        });
     });
 });

@@ -5,13 +5,15 @@
     "moduleResolution": "node",
     "baseUrl": "src",
     "allowSyntheticDefaultImports": true,
-    "noImplicitAny": true,
+    "noImplicitAny": false,
     "sourceMap": true,
     "outDir": "ts_build",
-    "jsx": "react"
+    "jsx": "react",
+    "typeRoots": [
+      "node_modules/@types"
+    ]
   },
   "exclude": [
-    "node_modules",
-    "typings"
+    "node_modules"
   ]
 }

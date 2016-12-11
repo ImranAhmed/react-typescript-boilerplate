@@ -7,75 +7,79 @@ import { Todo } from "../models/todo";
 import { TodoListComponent } from "./todo-list-component";
 import { TodoComponent } from "./todo-component";
 
-describe("Todo :: TodoListComponent :: ", () => {
+import * as constants from "../../constants";
 
-    describe("Empty ", () => {
+describe(constants.APPLICATION_NAME, () => {
+    describe("Todo :: TodoListComponent :: ", () => {
 
-        let wrapper: any;
+        describe("Empty ", () => {
 
-        // Arrange
-        beforeEach(() => {
+            let wrapper: any;
 
-            const onTodoClickSpy: any = jasmine.createSpy("onTodoClick");
-            const todos: Array<Todo> = null;
+            // Arrange
+            beforeEach(() => {
 
-            wrapper = shallow(<TodoListComponent todos={todos} onTodoClick={onTodoClickSpy} />);
+                const onTodoClickSpy: any = jasmine.createSpy("onTodoClick");
+                const todos: Array<Todo> = null;
+
+                wrapper = shallow(<TodoListComponent todos={todos} onTodoClick={onTodoClickSpy} />);
+            });
+
+            it("should have a parent div with class as component name", () => {
+
+                // Assert
+                expect(wrapper.find("div").prop("className")).toEqual("todo-list-component");
+            });
+
+            it("should not contain an unordered list", () => {
+
+                // Assert
+                expect(wrapper.find("ul").length).toEqual(0);
+            });
+
+            it("should not contain a todo component", () => {
+
+                // Assert
+                expect(wrapper.find(TodoComponent).length).toEqual(0);
+            });
         });
 
-        it("should have a parent div with class as component name", () => {
+        describe("Not Empty ", () => {
 
-            // Assert
-            expect(wrapper.find("div").prop("className")).toEqual("todo-list-component");
-        });
+            let wrapper: any;
 
-        it("should not contain an unordered list", () => {
+            // Arrange
+            beforeEach(() => {
 
-            // Assert
-            expect(wrapper.find("ul").length).toEqual(0);
-        });
+                const onTodoClickSpy: any = jasmine.createSpy("onTodoClick");
+                let todos: Array<Todo> = new Array<Todo>();
+                let todo: Todo = {
+                    id: 1,
+                    completed: true,
+                    text: _.uniqueId()
+                };
 
-        it("should not contain a todo component", () => {
+                todos.push(todo);
+                wrapper = shallow(<TodoListComponent todos={todos} onTodoClick={onTodoClickSpy} />);
+            });
 
-            // Assert
-            expect(wrapper.find(TodoComponent).length).toEqual(0);
-        });
-    });
+            it("should have a parent div with class as component name", () => {
 
-    describe("Not Empty ", () => {
+                // Assert
+                expect(wrapper.find("div").prop("className")).toEqual("todo-list-component");
+            });
 
-        let wrapper: any;
+            it("should contain a single unordered list", () => {
 
-        // Arrange
-        beforeEach(() => {
+                // Assert
+                expect(wrapper.find("ul").length).toEqual(1);
+            });
 
-            const onTodoClickSpy: any = jasmine.createSpy("onTodoClick");
-            let todos: Array<Todo> = new Array<Todo>();
-            let todo: Todo = {
-                id: 1,
-                completed: true,
-                text: _.uniqueId()
-            };
+            it("should contain a todo component", () => {
 
-            todos.push(todo);
-            wrapper = shallow(<TodoListComponent todos={todos} onTodoClick={onTodoClickSpy} />);
-        });
-
-        it("should have a parent div with class as component name", () => {
-
-            // Assert
-            expect(wrapper.find("div").prop("className")).toEqual("todo-list-component");
-        });
-
-        it("should contain a single unordered list", () => {
-
-            // Assert
-            expect(wrapper.find("ul").length).toEqual(1);
-        });
-
-        it("should contain a todo component", () => {
-
-            // Assert
-            expect(wrapper.find(TodoComponent).length).toEqual(1);
+                // Assert
+                expect(wrapper.find(TodoComponent).length).toEqual(1);
+            });
         });
     });
 });

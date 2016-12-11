@@ -7,7 +7,7 @@ interface TodoComponentProps {
     completed: boolean;
     text: string;
     onClick(): void;
-}
+};
 
 export const TodoComponent = (props: TodoComponentProps) => {
     return (<div className="todo-component">

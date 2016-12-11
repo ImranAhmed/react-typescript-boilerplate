@@ -1,6 +1,6 @@
-import React, { PropTypes } from "react";
+import * as React from "react";
 
-interface LinkComponentProps {
+export interface LinkComponentProps {
     active: boolean;
     children: number | string | Element | number[] | string[] | Element[];
     onClick: () => void;
