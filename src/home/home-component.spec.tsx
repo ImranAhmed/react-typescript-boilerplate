@@ -6,7 +6,7 @@ import { Home } from "./home-component";
 import * as constants from "../constants";
 
 describe(constants.APPLICATION_NAME, () => {
-    describe("Home :: Containers :: Home", () => {
+    describe("Home :: HomeComponent", () => {
 
         // Arrange
         let wrapper: any;
@@ -17,7 +17,7 @@ describe(constants.APPLICATION_NAME, () => {
 
         it("should have a parent div with class as component name", () => {
             // Assert
-            expect(wrapper.find("div").prop("className")).toEqual("home-container");
+            expect(wrapper.find("div").prop("className")).toContain("home-container");
         });
 
         it("should have a heading with correct text", () => {

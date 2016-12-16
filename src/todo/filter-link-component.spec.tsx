@@ -3,10 +3,10 @@ import { shallow } from "enzyme";
 
 import { FilterLinkComponent } from "./filter-link-component";
 
-import * as constants from "../../constants";
+import * as constants from "../constants";
 
 describe(constants.APPLICATION_NAME, () => {
-    describe("Todo :: LinkComponent :: ", () => {
+    describe("Todo :: FilterLinkComponent :: ", () => {
 
         function createWrapper(isActive: boolean): any {
             const onClickSpy: any = jasmine.createSpy("onClick");
@@ -29,12 +29,12 @@ describe(constants.APPLICATION_NAME, () => {
                 expect(wrapper.find("div").prop("className")).toEqual("link-component");
             });
 
-            it("should have a span containing children", () => {
+            it("should have a link containing children", () => {
 
                 // Assert
-                const element = wrapper.find("span");
+                const element = wrapper.find("a");
                 expect(element.length).toEqual(1);
-                expect(element.prop("className")).toEqual("non-active");
+                expect(element.prop("className")).toEqual("active");
                 expect(element.text()).toEqual("12");
             });
         });
@@ -52,12 +52,12 @@ describe(constants.APPLICATION_NAME, () => {
                 expect(wrapper.find("div").prop("className")).toEqual("link-component");
             });
 
-            it("should have a link containing children", () => {
+            it("should have a span containing children", () => {
 
                 // Assert
-                const element = wrapper.find("a");
+                const element = wrapper.find("span");
                 expect(element.length).toEqual(1);
-                expect(element.prop("className")).toEqual("active");
+                expect(element.prop("className")).toEqual("non-active");
                 expect(element.text()).toEqual("12");
             });
         });

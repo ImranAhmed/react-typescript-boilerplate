@@ -2,7 +2,7 @@ import * as React from "react";
 import * as Redux from "redux";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
-import { addTodo } from "../actions";
+import { addTodo } from "./actions";
 
 interface AddTodoProps {
     addTodo(item: string): void;

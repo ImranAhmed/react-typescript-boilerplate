@@ -1,7 +1,7 @@
 import { connect } from "react-redux";
 
-import { setVisibilityFilter } from "../actions";
-import { FilterLinkComponent } from "../components/filter-link-component";
+import { setVisibilityFilter } from "./actions";
+import { FilterLinkComponent } from "./filter-link-component";
 
 interface FilterLinkContainerProps {
     filter: string;

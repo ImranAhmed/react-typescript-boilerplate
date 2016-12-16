@@ -1,6 +1,5 @@
-import { Todo } from "../models/todo";
-import { TodoState, TodoAction } from "../models/app-state";
-import * as actionTypes from "../../constants/action-types";
+import { Todo, TodoState, TodoAction } from "./model";
+import * as actionTypes from "../constants/action-types";
 
 const initialTodoState: TodoState = {
 

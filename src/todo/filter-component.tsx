@@ -1,6 +1,6 @@
 import React, { PropTypes } from "react";
 
-import { FilterLinkContainer } from "../containers/filter-link-container";
+import { FilterLinkContainer } from "./filter-link-container";
 
 const styles = require("./filter-component.scss");
 

@@ -17,3 +17,9 @@ export interface TodoState extends TodoPayload, StateBase {
 
 export interface TodoAction extends TodoPayload, ActionBase {
 }
+
+export interface Todo {
+    id: number;
+    completed: boolean;
+    text: string;
+}

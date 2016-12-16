@@ -3,11 +3,11 @@ import * as _ from "lodash";
 
 import { shallow } from "enzyme";
 
-import { Todo } from "../models/todo";
+import { Todo } from "./model";
 import { TodoListComponent } from "./todo-list-component";
 import { TodoComponent } from "./todo-component";
 
-import * as constants from "../../constants";
+import * as constants from "../constants";
 
 describe(constants.APPLICATION_NAME, () => {
     describe("Todo :: TodoListComponent :: ", () => {
@@ -28,7 +28,7 @@ describe(constants.APPLICATION_NAME, () => {
             it("should have a parent div with class as component name", () => {
 
                 // Assert
-                expect(wrapper.find("div").prop("className")).toEqual("todo-list-component");
+                expect(wrapper.find("div").prop("className")).toContain("todo-list-component");
             });
 
             it("should not contain an unordered list", () => {
@@ -66,7 +66,7 @@ describe(constants.APPLICATION_NAME, () => {
             it("should have a parent div with class as component name", () => {
 
                 // Assert
-                expect(wrapper.find("div").prop("className")).toEqual("todo-list-component");
+                expect(wrapper.find("div").prop("className")).toContain("todo-list-component");
             });
 
             it("should contain a single unordered list", () => {

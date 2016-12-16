@@ -1,6 +1,7 @@
 import * as React from "react";
+import classNames from "classnames";
 
-import { Todo } from "../models/todo";
+import { Todo } from "./model";
 import { TodoComponent } from "./todo-component";
 
 export interface TodoListComponentProps {
@@ -23,7 +24,7 @@ export const TodoListComponent = (props: TodoListComponentProps) => {
         </ul>);
     };
 
-    return (<div className={styles.main}>
+    return (<div className={classNames(styles.main, "todo-list-component")}>
         {props.todos ? renderListOfItems() : null}
     </div>);
 };

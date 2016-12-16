@@ -2,7 +2,7 @@ import * as React from "react";
 import { shallow } from "enzyme";
 
 import { TodoComponent } from "./todo-component";
-import * as constants from "../../constants";
+import * as constants from "../constants";
 
 describe(constants.APPLICATION_NAME, () => {
     describe("Todo :: TodoComponent :: ", () => {
@@ -19,7 +19,7 @@ describe(constants.APPLICATION_NAME, () => {
         it("should have a parent div with class as component name", () => {
 
             // Assert
-            expect(wrapper.find("div").prop("className")).toEqual("todo-component");
+            expect(wrapper.find("div").prop("className")).toContain("todo-component");
         });
 
         it("should contain a single list item", () => {

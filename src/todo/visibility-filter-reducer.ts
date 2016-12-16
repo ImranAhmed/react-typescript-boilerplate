@@ -1,4 +1,4 @@
-import * as actionTypes from "../../constants/action-types";
+import * as actionTypes from "../constants/action-types";
 
 export const visibilityFilter = (state = "SHOW_ALL", action: any) => {
     switch (action.type) {

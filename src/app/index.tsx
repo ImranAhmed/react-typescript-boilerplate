@@ -4,7 +4,7 @@ import { render } from "react-dom";
 
 import { Provider } from "react-redux";
 import { createStore } from "redux";
-import { todoApp } from "../todo/reducers/";
+import { todoApp } from "../todo/reducers";
 import { Root } from "./root";
 
 import "../styles/global.scss";

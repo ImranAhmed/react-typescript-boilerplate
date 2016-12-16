@@ -1,7 +1,7 @@
 import { connect } from "react-redux";
-import { toggleTodo } from "../actions";
-import { TodoListComponent, TodoListComponentProps } from "../components/todo-list-component";
-import { Todo } from "../models/todo";
+import { toggleTodo } from "./actions";
+import { TodoListComponent, TodoListComponentProps } from "./todo-list-component";
+import { Todo } from "./model";
 
 
 interface VisibleTodoListContainerState {
