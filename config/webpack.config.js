@@ -107,5 +107,8 @@ module.exports = {
         "react/addons": "react/addons",
         "react/lib/ExecutionEnvironment": "react/lib/ExecutionEnvironment",
         "react/lib/ReactContext": "react/lib/ReactContext"
-    }
+    },
+    performance: {
+        hints: process.env.NODE_ENV === "production" ? "warning" : false
+    },
 };
